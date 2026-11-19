@@ -31,11 +31,11 @@ Output goes to `dist/`.
 
 ## Forms
 
-Forms aren't connected to a server yet. They only check your input in the browser. Registration can be emailed to `kelabdigital@gmail.com` (passwords are never included).
+Forms aren't connected to a server yet. They only check ur input in the browser. 
 
 ## Deploy
 
-Push to GitHub, set Pages source to GitHub Actions, and run the workflow in `.github/workflows/deploy.yml`. Don't forget to upload the hidden `.github/` folder and `.gitignore` too.
+Push to GitHub, set Pages source to GitHub Actions, and run the workflow in `.github/workflows/deploy.yml`. 
 
 ## Credits
 
