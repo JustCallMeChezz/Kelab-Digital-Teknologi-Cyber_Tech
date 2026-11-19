@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 · Halaman tidak ditemui · Kelab Teknologi Digital CyberTech</title>
+  <meta name="description" content="Halaman yang diminta tidak ditemui. Kembali ke laman utama Kelab Teknologi Digital CyberTech JMTI.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <style>
+    @font-face {
+      font-family: "Mona Sans";
+      src: url("./fonts/mona-sans-latin-variable.woff2") format("woff2");
+      font-weight: 200 900;
+      font-stretch: 100% 125%;
+      font-display: swap;
+    }
+
+    :root {
+      color-scheme: dark;
+      --paper: oklch(14% 0.048 264);
+      --ink: oklch(95% 0.016 250);
+      --ink-2: oklch(88% 0.05 245);
+      --muted: oklch(73% 0.04 256);
+      --rule: oklch(29% 0.058 264);
+      --rule-2: oklch(40% 0.06 262);
+      --accent: oklch(80% 0.11 230);
+      --accent-2: oklch(58% 0.1 236);
+      --accent-ink: oklch(16% 0.05 264);
+      --focus: oklch(84% 0.12 228);
+      --font-display: "Mona Sans", ui-sans-serif, system-ui, sans-serif;
+      --gutter: 64px;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { overflow-x: clip; }
+    html { scrollbar-color: var(--muted) var(--paper); }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-display);
+      font-size: 1rem;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      font-synthesis: none;
+    }
+    ::selection { background: oklch(80% 0.11 230 / 0.22); color: var(--ink); }
+    a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.16em; }
+    a:active { color: var(--accent); }
+    :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+    h1 {
+      max-width: 16ch;
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(2.25rem, 4vw + 0.5rem, 3.75rem);
+      font-stretch: 125%;
+      font-weight: 300;
+      letter-spacing: -0.015em;
+      line-height: 1.05;
+      text-wrap: balance;
+    }
+    p { margin: 0; text-wrap: pretty; }
+
+    .container {
+      width: 100%;
+      max-width: 1440px;
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+    }
+
+    .site-header { border-bottom: 1px solid var(--rule); }
+    .site-header::before { content: ""; display: block; height: 3px; background: var(--accent); }
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .brand__mark {
+      color: var(--accent);
+      font-size: 1.6rem;
+      font-stretch: 125%;
+      font-weight: 700;
+      letter-spacing: -0.08em;
+      line-height: 1;
+    }
+    .brand__text { display: flex; flex-direction: column; gap: 2px; line-height: 1.1; }
+    .brand__name { font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+    .brand__sub { color: var(--muted); font-size: 0.8125rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    .nav__links { display: flex; align-items: center; gap: clamp(16px, 2.2vw, 32px); }
+    .nav__links a:not(.btn) {
+      color: var(--muted);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 220ms var(--ease-out);
+    }
+    .nav__links a:not(.btn):hover { color: var(--ink); }
+
+    .btn {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: var(--accent-ink);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      line-height: 1;
+      text-decoration: none;
+      transition: background 220ms var(--ease-out), border-color 220ms var(--ease-out);
+    }
+    .btn:hover { background: var(--accent-2); border-color: var(--accent-2); color: var(--accent-ink); }
+    .btn:active { transform: translateY(1px); }
+    .nav__cta { margin-left: 8px; }
+
+    .not-found { flex: 1; padding-block: clamp(64px, 10vw, 144px) 96px; }
+    .not-found__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 64px;
+      align-items: start;
+    }
+    .section-mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 16px;
+      color: var(--accent);
+      font-size: 0.8125rem;
+      font-weight: 600;
+    }
+    .section-mark::before { content: ""; width: 28px; height: 1px; background: currentColor; }
+    .not-found__code {
+      margin: 0 0 24px;
+      color: var(--accent);
+      font-size: clamp(5rem, 13vw, 10rem);
+      font-stretch: 125%;
+      font-weight: 300;
+      letter-spacing: -0.04em;
+      line-height: 0.8;
+    }
+    .not-found h1 { margin-bottom: 24px; }
+    .lead {
+      max-width: 46ch;
+      color: var(--ink-2);
+      font-size: clamp(1.125rem, 0.35vw + 1rem, 1.375rem);
+      line-height: 1.45;
+    }
+    .not-found__actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .arrow-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--rule-2);
+      font-size: 0.8125rem;
+      text-decoration: none;
+      transition: border-color 220ms var(--ease-out), color 220ms var(--ease-out);
+    }
+    .arrow-link::after { content: "→"; transition: transform 220ms var(--ease-out); }
+    .arrow-link:hover { border-color: var(--accent); color: var(--accent); }
+    .arrow-link:hover::after { transform: translateX(4px); }
+
+    .not-found__aside { border-top: 1px solid var(--rule); padding-top: 24px; }
+    .route-list { border-top: 1px solid var(--rule); }
+    .route {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding-block: 16px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 220ms var(--ease-out);
+    }
+    .route:hover { color: var(--accent); }
+    .route span:last-child { color: var(--accent); }
+    .not-found__note { margin-top: 24px; color: var(--muted); font-size: 0.875rem; line-height: 1.6; }
+    .not-found__note a { color: var(--ink); }
+
+    .site-footer { border-top: 1px solid var(--rule); padding-block: 32px; }
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--muted);
+      font-size: 0.8125rem;
+    }
+
+    @media (max-width: 60rem) {
+      :root { --gutter: 24px; }
+      .nav__links { display: none; }
+      .not-found { padding-block: 64px 72px; }
+      .not-found__grid { grid-template-columns: minmax(0, 1fr); gap: 64px; }
+    }
+
+    @media (max-width: 40rem) {
+      :root { --gutter: 16px; }
+      .footer { flex-direction: column; }
+      .not-found__actions { gap: 20px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="./index.html" aria-label="Kelab Teknologi Digital CyberTech, ke laman utama">
+        <span class="brand__mark" aria-hidden="true">//</span>
+        <span class="brand__text">
+          <span class="brand__name">Kelab Teknologi Digital</span>
+          <span class="brand__sub">CyberTech, JMTI</span>
+        </span>
+      </a>
+
+      <nav class="nav__links" aria-label="Navigasi utama">
+        <a href="./index.html">Utama</a>
+        <a href="./kelab.html">Kelab</a>
+        <a href="./about.html">Tentang</a>
+        <a href="./Project.html">Projek</a>
+        <a href="./service.html">Hubungi</a>
+        <a class="btn nav__cta" href="./pendaftaran.html">Sertai</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="not-found">
+    <div class="container not-found__grid">
+      <div>
+        <p class="section-mark">Ralat 404</p>
+        <p class="not-found__code" aria-hidden="true">404</p>
+        <h1>Halaman tidak ditemui</h1>
+        <p class="lead">Alamat ini tiada atau telah dipindahkan. Kembali ke laman utama atau pilih halaman lain.</p>
+        <div class="not-found__actions">
+          <a class="btn" href="./index.html">Kembali ke laman utama <span aria-hidden="true">→</span></a>
+          <a class="arrow-link" href="./service.html">Hubungi kelab</a>
+        </div>
+      </div>
+
+      <aside class="not-found__aside">
+        <p class="section-mark">Mungkin anda mencari</p>
+        <nav class="route-list" aria-label="Halaman utama">
+          <a class="route" href="./index.html"><span>Utama</span><span aria-hidden="true">→</span></a>
+          <a class="route" href="./kelab.html"><span>Kelab</span><span aria-hidden="true">→</span></a>
+          <a class="route" href="./about.html"><span>Tentang</span><span aria-hidden="true">→</span></a>
+          <a class="route" href="./Project.html"><span>Projek</span><span aria-hidden="true">→</span></a>
+          <a class="route" href="./pendaftaran.html"><span>Pendaftaran</span><span aria-hidden="true">→</span></a>
+        </nav>
+        <p class="not-found__note">Pusat Komputer, Aras 2, JMTI<br><a href="mailto:kelabdigital@gmail.com">kelabdigital@gmail.com</a></p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer">
+      <span>© 2026 Kelab Teknologi Digital CyberTech</span>
+      <span>JMTI, Malaysia</span>
+    </div>
+  </footer>
+</body>
+</html>

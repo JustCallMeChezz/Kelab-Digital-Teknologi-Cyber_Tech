@@ -1,0 +1,1 @@
+import{t as e}from"./client-BWv52q3l.js";import{t}from"./HomeView-CXE9W94p.js";e(t,`home`);
