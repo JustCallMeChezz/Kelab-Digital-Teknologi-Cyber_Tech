@@ -40,3 +40,7 @@ Push to GitHub, set Pages source to GitHub Actions, and run the workflow in `.gi
 ## Credits
 
 Images and Mona Sans font are in `public/`. Font is under the SIL OFL 1.1 (see `public/fonts/OFL.txt`).
+
+## Note
+
+Im not a student on JMTI, this website just a template for my friend... if he want it...
